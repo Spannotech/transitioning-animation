@@ -1,0 +1,73 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+
+}
+
+.parent{
+    width: 80vw;
+    height: 60vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.child{
+    width: 80%;
+    height: 20vh;
+    background-color:white;
+    position: absolute;
+    left: 0;
+    /* transition-property: all;  
+    transition-duration: 5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s; */
+    /* transition: all 5s ease-in-out; */
+    animation-name:dragonball ;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    
+}
+.parent:hover{
+    background-color: black;
+}
+.child:hover{
+    transform: translateX(810px);
+    background-color: orange;
+}
+
+@keyframes dragonball{
+    from{
+        background-color: white;
+        transform: translateX(0px);
+
+    }
+    20%{
+    background-color: red;
+    width: 80%;
+
+    }
+    50%{
+        background-color: blue;
+        width: 50%;
+    }
+    75%{
+        background-color: green;
+        transform: translate(700px);
+        
+    }
+    to{
+        background-color: yellow;
+        transform: translateX(810px);
+        
+
+    }
+}
